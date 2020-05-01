@@ -13,7 +13,7 @@ public class PetTypesSeeder implements CommandLineRunner {
   private PetTypesRepository petTypesRepo;
 
   @Override
-  public void run(String... args) throws Exception{
+  public void run(String... args) throws Exception {
     if(petTypesRepo.count() == 0) {
       PetTypes nyanCat = new PetTypes();
       nyanCat.setType("Nyan Cat");
@@ -30,6 +30,6 @@ public class PetTypesSeeder implements CommandLineRunner {
       unicorn.setDescription("A equine animal, typically with white fur, easily identified by a large horn on their heads.");
       petTypesRepo.save(unicorn);
     }
-    petTypesRepo.findAll().forEach(System.out::println);
+//    petTypesRepo.findAll().forEach(System.out::println);
   }
 }
